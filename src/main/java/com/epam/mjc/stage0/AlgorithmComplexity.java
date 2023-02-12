@@ -20,16 +20,14 @@ public class AlgorithmComplexity {
      * Return the linear search complexity if the element you are looking for is at the end of the array.
      */
     public Complexity badLinerSearch() {
-        Complexity.O_N_2;
-        return;
+        return O_N_2;
     }
 
     /**
      * Return the complexity of accessing an array element by index.
      */
     public Complexity arrayIndexItemAccess() {
-        Complexity.O_N;
-        return;
+        return O_N;
 
     }
 
@@ -37,8 +35,7 @@ public class AlgorithmComplexity {
      * Return the complexity of a binary search.
      */
     public Complexity binarySorting() {
-        Complexity.O_LOG_N;
-        return;
+        return O_LOG_N;
 
     }
 
@@ -46,8 +43,7 @@ public class AlgorithmComplexity {
      * Return the complexity of the twoCycleSorting algorithm.
      */
     public Complexity twoCycleSorting() {
-        Complexity.O_1;
-        return;
+        return O_1;
 
     }
 }
