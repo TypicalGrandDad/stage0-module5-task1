@@ -49,32 +49,48 @@ public class ArrayTasks {
     }
     public String[] reverseArray(String[] arr) {
         int a = arr.length;
-        String thatNumber = "";
-        for (int i = 0; i<a; i++){
-            thatNumber = arr[a-i];
-            arr[i]=arr[a-i];
-            arr[i] = thatNumber;
+        String newNumber = "";
+        for (int i = 1; i<a;i++){
+            newNumber = arr[i-1];
+            arr[i-1] = arr[a-i];
+            arr[a-i] = newNumber;
+            if(i==a-2){
+                break;
+            }
 
+        }
+        for (int i = 0; i<a;i++){
+            System.out.println(arr[i]);
         }
         return arr;
 
     }
     public int[] getOnlyPositiveNumbers(int[] arr) {
         int a = arr.length;
-        int thatNumber = 0;
-        int j = 0;
+        int newNumber = 0;
+        int check = 0;
         for(int i = 0; i<a; i++){
             if(arr[i]<0){
-                thatNumber = arr[a-i];
-                arr[i]=arr[a-i];
-                arr[i] = thatNumber;
-                j +=1;
+                for (int x = i; x<=a-i+1;x++){
+                    newNumber = arr[x];
+                    arr[x] = arr[x+1];
+                    arr[x+1] = newNumber;
+                    if(x==a-2){
+                        break;
+                    }
+
+                }
             }
         }
-        j = a-j;
-        int[]arr1 =new int [j];
-        for (int i = 0; i<j; i ++){
+        for (int i = 0; i<a;i++){
+            if(arr[i]>0){
+                check+=1;
+            }
+        }
+        int[] arr1 = new int[check];
+        for (int i = 0; i<check;i++){
             arr1[i] = arr[i];
+            System.out.println(arr1[i]);
         }
         return arr1;
 
